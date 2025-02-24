@@ -32,5 +32,25 @@ def get_eleven_api_key():
     eleven_api_key = os.getenv("ELEVEN_API_KEY")
     return eleven_api_key
 
+def get_langchain_api_key():
+    load_env()
+    langchain_endpoint = os.getenv("LANGCHAIN_API_KEY")
+    return langchain_endpoint
+
+def get_langchain_tracing_v2():
+    load_env()
+    langchain_tracing_v2 = os.getenv("LANGCHAIN_TRACING_V2")
+    return langchain_tracing_v2
+
+def get_langchain_endpoint():
+    load_env()
+    langchain_endpoint = os.getenv("LANGCHAIN_ENDPOINT")
+    return langchain_endpoint
+
+def get_langchain_project():
+    load_env()
+    langchain_project = os.getenv("LANGCHAIN_PROJECT")
+    return langchain_project
+
 def print_response(text):
     display(Markdown(text))
